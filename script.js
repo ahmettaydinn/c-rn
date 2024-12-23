@@ -1,83 +1,68 @@
-const counterEl = document.querySelector('.counter');
-const increaseButtonEl = document.querySelector('.counter__button--increase');
-const decreaseButtonEl = document.querySelector('.counter__button--decrease');
-const resetButtonEl = document.querySelector('.counter__reset-button');
-const counterValueEl = document.querySelector('.counter__value');
-const counterTitleEl = document.querySelector('.counter__title');
+// -- variables (var/let/const) & data types/structures (strings/numbers/booleans/arrays/objects) --
+// const description = 'We need a new floor.';
+// const squareMeters = 100;
+// const specialCoating = true;
+// const floorOptions = ['carpet', 'hardwood', 'tiles'];
+// const renovationJob = {
+//     ownerName: 'John',
+//     maximumPrice: 5000,
+//     category: 'bathroom',
+//     newShower: true
+// };
 
-resetButtonEl.addEventListener('click', () => {
-  // set counter value to 0
-  counterValueEl.textContent = 0;
 
-  // reset background color
-  counterEl.classList.remove('counter--limit');
+// -- traditional functions vs arrow functions --
 
-  // reset counter title
-  counterTitleEl.textContent = 'Fancy Counter';
+// function calculatePrice(sqMeters) {
+//     return 1000 + sqMeters;
+// }
 
-  // enable increase and decrease buttons
-  increaseButtonEl.disabled = false;
-  decreaseButtonEl.disabled = false;
+// var calculatePrice = function(sqMeters) {
+//     return 1000 + sqMeters;
+// };
 
-  // unfocus (blur) reset button
-  resetButtonEl.blur();
-});
+// const calculatePrice = (sqMeters) => {
+//     return 1000 + sqMeters;
+// };
 
-decreaseButtonEl.addEventListener('click', () => {
-  // get current value of counter
-  const currentValue = counterValueEl.textContent;
+// const calculatePrice = sqMeters => 1000 + sqMeters;
 
-  // convert value value to number type
-  const currentValueAsNumber = +currentValue;
 
-  // decrement by 1
-  let newValue = currentValueAsNumber - 1;
+// -- string concatenation vs template literals --
+// const price = 5000;
+// const result = 'The total cost will be: ' + price;
+// const result = `The total cost will be: ${price}`;
 
-  // check if new value is less than 0
-  if (newValue < 0) {
-    // if it is, force it to be 0 instead
-    newValue = 0;
-  }
 
-  // update counter value with new value
-  counterValueEl.textContent = newValue;
+// -- if-else vs ternary operator --
+// const price = 5000;
 
-  // unfocus (blur) button
-  decreaseButtonEl.blur();
-});
+// if (price) {
+//     console.log('hello');
+// } else {
+//     console.log('blabla');
+// }
 
-const incrementCounter = () => {
-  // get current value of counter
-  const currentValue = counterValueEl.textContent;
-    
-  // convert value to number type
-  const currentValueAsNumber = +currentValue;
+// price > 3000 ? console.log('expensive') : console.log('cheap');
 
-  // increment by 1
-  let newValue = currentValueAsNumber + 1;
 
-  // check if new value is greater than 5
-  if (newValue > 5) {
-    // if it is, force it to be 5 instead
-    newValue = 5;
+// -- manipulating HTML and CSS --
+// const headingEl = document.querySelector('.heading');
 
-    // give visual indicator that limit has been reached
-    counterEl.classList.add('counter--limit');
+// headingEl.textContent = 'Hello <span class="heading--big">everyone</span>!';
+// headingEl.innerHTML = 'Hello <span class="heading--big">everyone</span>!';
+// headingEl.insertAdjacentHTML('beforebegin', 'Hello <span class="heading--big">everyone</span>!');
 
-    // update counter title to say limit has been reached
-    counterTitleEl.innerHTML = 'Limit! Buy <b>Pro</b> for >5';
+// headingEl.style.fontSize = '55px';
+// headingEl.classList.add('heading--big');
 
-    // disable increase and decrease buttons
-    increaseButtonEl.disabled = true;
-    decreaseButtonEl.disabled = true;
-  }
 
-  // set counter element with new value
-  counterValueEl.textContent = newValue;
+// -- events and functions for handling events (also called "event handlers") --
+// const headingEl = document.querySelector('.heading');
 
-  // unfocus (blur) button
-  increaseButtonEl.blur();
-}
+// const clickHandler = () => {
+//     headingEl.style.color = 'red';
+//     console.log('changed color');
+// };
 
-increaseButtonEl.addEventListener('click', incrementCounter);
-document.addEventListener('keydown', incrementCounter);
+// headingEl.addEventListener('click', clickHandler);
