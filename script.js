@@ -1,68 +1,60 @@
-// -- variables (var/let/const) & data types/structures (strings/numbers/booleans/arrays/objects) --
-// const description = 'We need a new floor.';
-// const squareMeters = 100;
-// const specialCoating = true;
-// const floorOptions = ['carpet', 'hardwood', 'tiles'];
-// const renovationJob = {
-//     ownerName: 'John',
-//     maximumPrice: 5000,
-//     category: 'bathroom',
-//     newShower: true
+// setTimeout(function() {
+
+
+//     console.log('Hello');
+//     console.log('Hi');
+
+
+// }, 5000);
+
+
+// setInterval(() => {
+//     console.log('Hello');
+//   console.log('Hi');
+
+// }, 2000);
+
+
+
+// const numbers = [5, 10, 15];
+
+// numbers.forEach(function(nr) {
+// console.log(nr + 1);
+
+    
+// });
+
+
+// for 
+
+// for (let i = 0; i < 3; i++ ) {
+//     console.log(i);
+// } 
+
+// // fetch then res soru sor
+// const headingE1 = document.querySelector('.heading');
+// const number = 10;
+
+// const user = {
+//     name: 'Emily',
+//     city: 'Miami'
 // };
 
+// headingE1.innerHTML = `
+//     Hi <span>everyone</span>
+//     How are you doing?
+//     Javascript is tough
+//     ${user.city}
+// `;
 
-// -- traditional functions vs arrow functions --
+// const containerE1 = document.querySelector('.container');
 
-// function calculatePrice(sqMeters) {
-//     return 1000 + sqMeters;
-// }
+// containerE1.addEventListener('click', function(event) {
+//     console.log(event.target);
+// });
 
-// var calculatePrice = function(sqMeters) {
-//     return 1000 + sqMeters;
-// };
+// const listE1 = document.querySelector('.list');
 
-// const calculatePrice = (sqMeters) => {
-//     return 1000 + sqMeters;
-// };
-
-// const calculatePrice = sqMeters => 1000 + sqMeters;
-
-
-// -- string concatenation vs template literals --
-// const price = 5000;
-// const result = 'The total cost will be: ' + price;
-// const result = `The total cost will be: ${price}`;
-
-
-// -- if-else vs ternary operator --
-// const price = 5000;
-
-// if (price) {
-//     console.log('hello');
-// } else {
-//     console.log('blabla');
-// }
-
-// price > 3000 ? console.log('expensive') : console.log('cheap');
-
-
-// -- manipulating HTML and CSS --
-// const headingEl = document.querySelector('.heading');
-
-// headingEl.textContent = 'Hello <span class="heading--big">everyone</span>!';
-// headingEl.innerHTML = 'Hello <span class="heading--big">everyone</span>!';
-// headingEl.insertAdjacentHTML('beforebegin', 'Hello <span class="heading--big">everyone</span>!');
-
-// headingEl.style.fontSize = '55px';
-// headingEl.classList.add('heading--big');
-
-
-// -- events and functions for handling events (also called "event handlers") --
-// const headingEl = document.querySelector('.heading');
-
-// const clickHandler = () => {
-//     headingEl.style.color = 'red';
-//     console.log('changed color');
-// };
-
-// headingEl.addEventListener('click', clickHandler);
+// listE1.addEventListener('click', function(event) {
+//     console.log(event.target);
+// });
